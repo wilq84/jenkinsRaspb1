@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
+    stage('python config') {
       steps {
         sh 'python3 --version'
+        sh 'pip install boto3'
       }
     }
     stage('aws instance stop') {
