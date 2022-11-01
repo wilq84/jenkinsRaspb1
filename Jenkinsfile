@@ -4,7 +4,7 @@ pipeline {
     stage('python config') {
       steps {
         sh 'python3 --version'
-        sh 'pip install boto3'
+        sh 'pip3 install boto3'
       }
     }
     stage('aws instance stop') {
