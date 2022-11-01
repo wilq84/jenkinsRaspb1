@@ -5,8 +5,8 @@ pipeline {
       steps {
         sh 'python3 --version'
         sh 'pip3 install boto3'
-        sh 'mkdir .aws'
-        sh 'cp /home/pi/.aws/* .aws/'
+        sh 'mkdir /var/lib/jenkins/.aws'
+        sh 'cp /home/pi/.aws/* /var/lib/jenkins/.aws/'
       }
     }
     stage('aws instance stop') {
