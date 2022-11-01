@@ -4,7 +4,7 @@ pipeline {
     stage('python config') {
       steps {
         sh 'python3 --version'
-        sh 'echo $PATH'
+        sh 'export PYTHONPATH=$WORKSPACE:$PYTHONPATH'
       }
     }
     stage('aws instance stop') {
